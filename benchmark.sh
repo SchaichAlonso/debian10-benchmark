@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-find . -mindepth 2 -name '*.sh' -exec sh run-benchmark.sh {} \;
+for benchmark in $(find . -mindepth 2 -name '*.sh' -print | sort); do
+    bash "${benchmark}"
+done;
