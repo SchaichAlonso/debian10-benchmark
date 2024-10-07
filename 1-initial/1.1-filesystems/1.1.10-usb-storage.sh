@@ -58,9 +58,9 @@
    # Report results. If no failures output in l_output2, we pass 
    [ -n "$l_output3" ] && echo -e "\n\n -- INFO --\n - module: \"$l_mname\" exists in:$l_output3" 
    if [ -z "$l_output2" ]; then 
-      echo -e "$(tput setaf 2)PASS $0 $(tput sgr0)\n$l_output\n" 
+      echo -e "$(tput setaf 2)PASS $0 $(tput sgr0) - $l_output" 
    else 
-      echo -e "$(tput setaf 1)FAIL $0 $(tput sgr0) \n$l_output2\n" 
+      echo -e "$(tput setaf 1)FAIL $0 $(tput sgr0) - $l_output2" 
       [ -n "$l_output" ] && echo -e "\n- Correctly set:\n$l_output\n" 
    fi 
 } 
