@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if (findmnt -nk /tmp | grep -qe "nodev"); then
-    echo -e "\n- Audit Result:\n  ** PASS **"
+    echo -e "Audit Result: $(tput setaf 2)PASS$(tput sgr0)"
 else
-    echo -e "\n- Audit Result:\n  ** FAIL **"
+    echo -e "Audit Result: $(tput setaf 2)FAIL$(tput sgr0)"
 fi
