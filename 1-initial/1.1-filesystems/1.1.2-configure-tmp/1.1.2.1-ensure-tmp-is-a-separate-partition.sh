@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if findmnt -nk /tmp; then
-    echo -e "\n- Audit Result:\n  ** PASS **"
+    echo -e "$(tput setaf 2)PASS $0 $(tput sgr0)"
 else
-    echo -e "\n- Audit Result:\n  ** FAIL **"
+    echo -e "$(tput setaf 1)FAIL $0 $(tput sgr0)"
 fi
