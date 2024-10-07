@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-find . -name '*.sh' -mindepth 2 -exec sh run-benchmark.sh {} \;
+find . -mindepth 2 -name '*.sh' -exec sh run-benchmark.sh {} \;
